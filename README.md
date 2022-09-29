@@ -1,27 +1,76 @@
-# Calculator
+# Тестовое задание "Калькулятор"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+##Описание установки
+Данное приложение реализует функционал калькулятора. В качестве математических операций выступают операции сложения, вычитания, деления, умножения, вычисление квадратного корня и нахождение процента. Реализован функционал выражения со скобками. В операциях вычисления квадратного корня, процента и скобок реализован только первый уровень вложенности. Результат выводится при нажатии на кнопку "=" или при нажатии "Enter" на клавиатуре. Калькулятор полностью очищается при нажатии "Esc" на клавиатуре. При нажатии на кнопку "С" на калькуляторе удаляется последний введенный элемент.
 
-## Development server
+Данный проект был собрал с помощью pwa с помощью следующих команд:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+ng add @angular/pwa
+ng build --configuration "production"
+```
 
-## Code scaffolding
+## Запуск калькулятора
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Для того чтобы запустить калькулятора необходимо:
 
-## Build
+1. Открыть данный репозиторий
+2. Открыть терминал
+3. Ввести поочередно следующую команду:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm install -g http-server
+```
 
-## Running unit tests
+4. Открыть папку dist
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+cd dist
+```
 
-## Running end-to-end tests
+5. Открыть папку calculator
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+cd calculator
+```
 
-## Further help
+В результате в терминале должен отображаться следующий маршрут:
+../calculator/dist/calculator
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. Необходимо ввести следующую команду:
+
+```
+http-server -p 4200
+```
+
+7. Найдите данные строки и кликните по любому из доменов
+
+```
+http://192.168.0.2:4200
+http://192.168.56.1:4200
+http://127.0.0.1:4200
+```
+
+#### Примечание
+
+Если вы хотите запустить не собранный проект, то корневой папке репозитория в терминале небходимо прописать
+
+```
+npm start
+```
+
+## Запуск тестов
+
+Для того, чтобы запустить тесты необходимо находиться в корневой папке проекта и в терминале ввести команду
+
+```
+ng test
+```
+
+## Запуск статического анализа
+
+Для того, чтобы запустить статический анализ приложения необходимо находиться в корневой папке проекта и в терминале ввести команду
+
+```
+ng lint
+```
