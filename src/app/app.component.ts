@@ -208,7 +208,7 @@ export class AppComponent{
       }
     }
     // Данный блок предназначен для корректного отображения ошибок
-    if(calcArr.length > 1 || isNaN(this.operand2) || isNaN(this.operand1) || this.input === 'NaN'){
+    if(calcArr.length > 1 || isNaN(this.operand2) || isNaN(this.operand1) || !isFinite(this.operand2) || this.input === 'NaN'){
       this.expression = this.input
       this.input = 'Ошибка'
       return this.input
